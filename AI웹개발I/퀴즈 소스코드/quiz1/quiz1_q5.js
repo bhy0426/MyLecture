@@ -1,0 +1,1 @@
+console.log([9, 5, 2].reduce((acc, v) => acc + v, '1'));

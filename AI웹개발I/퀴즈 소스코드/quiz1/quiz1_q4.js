@@ -1,0 +1,1 @@
+[, , , 2].map((v, i) => v * i).forEach((v, i) => console.log(v + i));
