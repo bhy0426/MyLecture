@@ -1,43 +1,26 @@
-// 유클리드 호제법
 #include <stdio.h>
 
-int gcd(int x, int y)
+// 원반 1 ~ 원반 no를 x 기둥에서 y 기둥으로 옮김
+void move(int no, int x, int y)
 {
-    if(x == y)
-        return x;
-    else
-    {
-        if(x > y)
-        {
-            return gcd(y, x % y);
-        }
-        else
-        {
-            return gcd(x, y % x);
-        }
-    }
+    if(no > 1)
+        // 재귀
+        move(no - 1, x , 6 - x - y); // 그룹을 시작 기둥에서 중간 기둥으로
+
+    // 바닥 원반을 목표 기둥으로
+    printf("원반[%d]를 %d 기둥에서 %d 기둥으로 옮김\n", no, x, y);
+
+    if(no > 1)
+        // 재귀
+        move(no - 1, 6 - x - y, x); // 그룹을 중간 기둥에서 목표 기둥으로
 }
 
-int main()
+int main(void)
 {
-    // 직사각형 가로 세로 길이를 입력 받음
-    int x, y;
-    printf("가로 : ");
-    scanf("%d", &x);
-    printf("세로 : ");
-    scanf("%d", &y);
+    int n;
+    printf("하노이의 탑 \n 원반 개수: ");
+    scanf("%d", &n);
+    move(n, 1, 3); // 원반의 개수, 출발 기둥 번호, 도착 기둥 번호
 
-    // func 호출하여 가로와 세로를 인수로 받고 큰 수를 작은 수로 나눠서 나머지를 반환
-    // 작은 수와 나머지를 다시 인수로 받음
-    // (나머지가 없으면) 최대공약수를 반환
-    // 22 8
-    // 8 6
-    // 6 2
-    // 2 2
-    // if(x == y)
-    // return x
-    printf("%d %d", x, y);
-    printf("최대 공약수 : %d", gcd(x, y));
-    
     return 0;
 }
