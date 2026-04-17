@@ -1,8 +1,3 @@
-const arr = [10, 20, 30, 40, 50];
+let a;
 
-for(var i = 0; i < arr.length; ++i)
-{
-    setTimeout(function() {
-        console.log("i: " + i);
-    }, 1000)
-}
+console.log(a+"안녕");
