@@ -7,5 +7,5 @@ function f1(a, b, c) {
     return this.a + b + c;
 }
 
-const f2 = f1.bind(obj, 3, 5, 7);
+const f2 = f1.bind(obj, 3, 5, 7); // 이해 못함
 console.log(f2(4, 6, 8));

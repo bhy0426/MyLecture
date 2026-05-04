@@ -9,4 +9,4 @@ const obj = {
 };
 
 let f = obj.f;
-console.log(f());
+console.log(f()); // 함수로서 호출 a=3

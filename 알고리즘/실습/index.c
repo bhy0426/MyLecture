@@ -12,7 +12,7 @@ void move(int no, int x, int y)
 
     if(no > 1)
         // 재귀
-        move(no - 1, 6 - x - y, x); // 그룹을 중간 기둥에서 목표 기둥으로
+        move(no - 1, 6 - x - y, y); // 그룹을 중간 기둥에서 목표 기둥으로
 }
 
 int main(void)

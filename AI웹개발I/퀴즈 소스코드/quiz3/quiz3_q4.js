@@ -10,4 +10,8 @@ const obj = {
 };
 
 const f = obj.f;
-console.log(f() + obj.g() * 2 + obj.h() * 4);
+
+console.log(f());
+console.log(obj.g() * 2);
+console.log(obj.h() * 4);
+console.log(f() + obj.g() * 2 + obj.h() * 4); // 이해 못함
