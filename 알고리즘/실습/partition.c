@@ -15,7 +15,7 @@ void partition(int a[], int n)
         if(pl <= pr) {
             swap(int, a[pl], a[pr]);
             pl++;
-            pl--;
+            pr--;
         }
     } while(pl <= pr);
     printf("피벗의 값은 %d입니다.\n", x);
