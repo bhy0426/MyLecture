@@ -1,6 +1,3 @@
-#but {
-  width: 100px;
-  height: 50px;
-  background-color: crimson;
-  align-self: center;
+.container {
+  background-color: cyan;
 }

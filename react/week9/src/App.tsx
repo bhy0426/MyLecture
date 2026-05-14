@@ -1,17 +1,9 @@
-import './App.css'
+import TodoList from "./TodoList"
 
-function App() {
+const App : React.FC = () => {
   return (
     <>
-      <h1>React</h1>
-      <h3>React</h3>
-      <div>React</div>
-      <ol>
-        <li>JS</li>
-        <li>TS</li>
-      </ol>
-      <a href="">React</a>
-      <button id="but">button</button>
+      <TodoList></TodoList>
     </>
   )
 }
