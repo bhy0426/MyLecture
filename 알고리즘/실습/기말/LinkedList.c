@@ -74,11 +74,11 @@ void RemoveFront(List *list)
 void RemoveRear(List *list)
 {
     if (list->head != NULL) {
-        if (list->head->next == NULL) {    /* 노드가 하나뿐이면 */
+        if ((list->head)->next == NULL) {    /* 노드가 하나뿐이면 */
             RemoveFront(list);             /* 머리 노드를 삭제 */
         } else {
             Node *ptr = list->head;
-            Node *pre = list->head;
+            Node *pre;
             while (ptr->next != NULL) {
                 pre = ptr;
                 ptr = ptr->next;    /* 마지막 노드와 그 앞 노드를 찾음 */
